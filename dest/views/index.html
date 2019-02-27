@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>test</title>
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v1.0.0/zr/css/cdn_zr.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/dest/components/css/index.css">
+</head>
+<body>
+<button id="add" class="zr-btn zr-btn-primary">添加一行</button>
+<div class="zt-datatables zr-table-wrap zr-table-checkbox">
+    <table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>
+</div>
+<script src="//storage.360buyimg.com/v1.0.0/zr.min.js"></script>
+<script>
+    Zr.config({
+        //配置plugin_modules的目录；
+        baseUrl: "/dest/components/",
+        //开发模式，默认关闭；
+        requestTime: true
+    });
+
+    Zr.ready(function () {
+        Zr.use('./js/index.js', function (zr, initJs) {
+            initJs.init();
+        });
+    })
+</script>
+</body>
+</html>
